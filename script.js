@@ -1,55 +1,43 @@
 const track = document.querySelector(".carousel-track");
-
 const images = document.querySelectorAll(".carousel-track img");
 
 const prev = document.querySelector(".prev");
-
 const next = document.querySelector(".next");
 
 let index = 0;
 
-const imageWidth = 130;
+// Largura da imagem + margem
+const imageWidth = 175;
 
 function update(){
-
-    track.style.transform = `translateX(-${index*imageWidth}px)`;
-
+    track.style.transform = `translateX(-${index * imageWidth}px)`;
 }
 
-next.onclick=()=>{
+next.addEventListener("click", ()=>{
 
-    if(index<images.length-2){
-
+    if(index < images.length - 2){
         index++;
-
     }else{
-
-        index=0;
-
+        index = 0;
     }
 
     update();
 
-}
+});
 
-prev.onclick=()=>{
+prev.addEventListener("click", ()=>{
 
-    if(index>0){
-
+    if(index > 0){
         index--;
-
     }else{
-
-        index=images.length-2;
-
+        index = images.length - 2;
     }
 
     update();
 
-}
+});
 
+// Troca automática a cada 3 segundos
 setInterval(()=>{
-
     next.click();
-
 },3000);
