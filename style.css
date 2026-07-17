@@ -5,157 +5,142 @@
 }
 
 body{
-
     font-family:Poppins,sans-serif;
-
     background:linear-gradient(180deg,#ffccd5,#ffe5ec,#fff0f3);
-
     min-height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow-x:hidden;
-
 }
 
 .container{
-
     width:95%;
-
     max-width:420px;
-
     text-align:center;
-
     padding:20px;
-
 }
 
 h1{
-
     font-family:'Poppins',sans-serif;
-
-    font-size:42px;
-
+    font-size:38px;
     color:#d6336c;
-
     margin-bottom:20px;
-
     animation:fade 2s;
-
 }
 
 .fotoPrincipal{
-
     width:100%;
-
     border-radius:20px;
-
     box-shadow:0 10px 25px rgba(0,0,0,.25);
-
     margin-bottom:20px;
-
 }
 
 .ecg{
-
     width:90%;
-
-    margin:15px auto 35px;
-
+    margin:20px auto 40px;
     display:block;
-
 }
 
 .carousel{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:10px;
-
+    gap:12px;
+    margin-bottom:40px;
 }
 
 .carousel-container{
-
     overflow:hidden;
-
-    width:260px;
-
+    width:340px;
 }
 
 .carousel-track{
-
     display:flex;
-
-    transition:.5s;
-
+    transition:0.5s ease;
 }
 
 .carousel img{
-
-    width:120px;
-
-    height:160px;
-
+    width:160px;
+    height:220px;
     object-fit:cover;
+    border-radius:20px;
+    margin-right:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    transition:.3s;
+}
 
-    border-radius:15px;
-
-    margin-right:10px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-
+.carousel img:hover{
+    transform:scale(1.05);
 }
 
 .btn{
-
     border:none;
-
-    width:40px;
-
-    height:40px;
-
+    width:45px;
+    height:45px;
     border-radius:50%;
-
     background:#ff4d6d;
-
     color:white;
-
-    font-size:22px;
-
+    font-size:24px;
     cursor:pointer;
+    transition:.3s;
+}
 
+.btn:hover{
+    background:#e63961;
+    transform:scale(1.1);
 }
 
 .btn:active{
+    transform:scale(.95);
+}
 
-    transform:scale(.9);
+/* FRASE */
 
+.frase{
+    margin-top:25px;
+    color:#a61e4d;
+    font-size:18px;
+    font-style:italic;
+    line-height:28px;
+}
+
+/* YOUTUBE MUSIC */
+
+.music{
+    margin-top:35px;
+    margin-bottom:30px;
+}
+
+.music p{
+    color:#d6336c;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.ytmusic{
+    width:80px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.ytmusic:hover{
+    transform:scale(1.15);
+}
+
+.ytmusic:active{
+    transform:scale(.95);
 }
 
 @keyframes fade{
-
     from{
-
         opacity:0;
-
         transform:translateY(-20px);
-
     }
 
     to{
-
         opacity:1;
-
         transform:translateY(0);
-
     }
-
 }
